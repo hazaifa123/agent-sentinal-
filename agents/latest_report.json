@@ -1,0 +1,68 @@
+{
+  "services": [
+    {
+      "service": "order-service",
+      "healthy": false,
+      "status_code": 500,
+      "response_time_ms": 17.69,
+      "details": {
+        "error": "Database connection failed",
+        "service": "order-service",
+        "status": "unhealthy"
+      },
+      "timestamp": "2026-04-23T23:49:45.509571",
+      "cpu": 3.3,
+      "memory": 9.8,
+      "chaos_mode": true
+    },
+    {
+      "service": "payment-service",
+      "healthy": true,
+      "status_code": 200,
+      "response_time_ms": 8.26,
+      "details": {
+        "failure_rate": "0.0%",
+        "service": "payment-service",
+        "status": "healthy",
+        "uptime": 1776970186.536554
+      },
+      "timestamp": "2026-04-23T23:49:46.538877",
+      "cpu": 5.8,
+      "memory": 9.8,
+      "chaos_mode": false
+    },
+    {
+      "service": "inventory-service",
+      "healthy": true,
+      "status_code": 200,
+      "response_time_ms": 22.39,
+      "details": {
+        "service": "inventory-service",
+        "status": "healthy",
+        "total_products": 5,
+        "uptime": 1776970187.575724
+      },
+      "timestamp": "2026-04-23T23:49:47.579157",
+      "cpu": 1.5,
+      "memory": 9.8,
+      "chaos_mode": false
+    }
+  ],
+  "issues": [
+    {
+      "service": "order-service",
+      "error": "Database connection failed",
+      "response_time": 17.69,
+      "timestamp": "2026-04-23T23:49:45.509571"
+    }
+  ],
+  "system_metrics": {
+    "system_cpu": 39.8,
+    "system_memory": 82.4,
+    "system_memory_available_gb": 2.79,
+    "disk_usage": 99.8
+  },
+  "timestamp": "2026-04-23T23:49:49.600024",
+  "healthy_count": 2,
+  "total_count": 3
+}

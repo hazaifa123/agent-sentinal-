@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  order-service:
+    build: ./services/order-service
+    ports:
+      - "5001:5001"
+    environment:
+      - PORT=5001
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5001/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  payment-service:
+    build: ./services/payment-service
+    ports:
+      - "5002:5002"
+    environment:
+      - PORT=5002
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5002/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  inventory-service:
+    build: ./services/inventory-service
+    ports:
+      - "5003:5003"
+    environment:
+      - PORT=5003
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5003/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
