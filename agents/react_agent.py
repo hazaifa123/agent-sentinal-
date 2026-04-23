@@ -73,7 +73,7 @@ Respond ONLY in this exact JSON format, nothing else:
     print(f"   Issues detected: {len(issues)}")
     print("   Sending to Gemini for root cause analysis...")
 
-    model = genai.GenerativeModel("gemini-2.0-flash-lite")
+    model = genai.GenerativeModel("GPT-5.4")
     response = model.generate_content(prompt)
     raw_response = response.text
 
